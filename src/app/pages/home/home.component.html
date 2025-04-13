@@ -1,0 +1,16 @@
+<section class="custom-carousel">
+  <!-- <h2>Image Carousel</h2> -->
+  <div class="carousel-wrapper">
+    <img [src]="images[currentIndex]" alt="Carousel image" class="carousel-image" />
+
+    <button class="nav prev" (click)="prevImage()">❮</button>
+    <button class="nav next" (click)="nextImage()">❯</button>
+  </div>
+
+  <div class="dots">
+    <span *ngFor="let img of images; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="goToImage(i)">
+    </span>
+  </div>
+</section>

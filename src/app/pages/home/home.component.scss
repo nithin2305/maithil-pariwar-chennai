@@ -1,0 +1,57 @@
+/* filepath: /f:/Maithil-Pariwar/maithil-pariwar-chennai/src/app/pages/home/home.component.scss */
+.custom-carousel {
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+  
+      .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+      }
+    }
+  
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+  
+    .prev {
+      left: 10px;
+    }
+  
+    .next {
+      right: 10px;
+    }
+  
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  
+      span {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: gray;
+        border-radius: 50%;
+        cursor: pointer;
+  
+        &.active {
+          background-color: black;
+        }
+      }
+    }
+  }

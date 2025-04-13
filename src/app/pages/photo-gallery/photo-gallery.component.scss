@@ -1,0 +1,25 @@
+section{
+  color: #ff6900; /* Set the font color for the entire section */
+
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Add spacing between images */
+  justify-content: center;
+
+  img {
+    width: 200px; /* Set a fixed width for the images */
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the images maintain their aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+    transform-origin: center; /* Ensure the enlargement happens from the center */
+
+    &:hover {
+      transform: scale(5.2); /* Enlarge the image on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+      z-index: 1; /* Ensure the hovered image appears on top */
+    }
+  }
+}

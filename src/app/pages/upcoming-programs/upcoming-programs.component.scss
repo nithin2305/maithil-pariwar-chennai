@@ -1,0 +1,36 @@
+/* filepath: /f:/Maithil-Pariwar/maithil-pariwar-chennai/src/app/pages/upcoming-programs/upcoming-programs.component.scss */
+.upcoming-programs-box {
+    background-color: #fff5e6; /* Light background color for the box */
+    border: 2px solid #ff6900; /* Add a border with the theme color */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 20px; /* Add padding inside the box */
+    max-width: 600px; /* Limit the width of the box */
+    margin: 20px auto; /* Center the box horizontally and add vertical spacing */
+    text-align: center; /* Center-align the text */
+  
+    h2 {
+      color: #ff6900; /* Set the font color */
+      font-size: 24px; /* Adjust the font size */
+      margin-bottom: 15px; /* Add spacing below the heading */
+    }
+  
+    ul {
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      margin: 0;
+  
+      h2 {
+        font-size: 20px; /* Adjust the font size for the inner heading */
+        color: #333; /* Set a different color for the inner heading */
+      }
+      img {
+        display: block; /* Make the image a block element */
+        margin: 0 auto; /* Center the image horizontally */
+        max-width: 100%; /* Ensure the image does not exceed the container width */
+        height: auto; /* Maintain the aspect ratio */
+        border-radius: 8px; /* Add rounded corners to the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
+    }
+  }

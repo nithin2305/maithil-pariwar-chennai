@@ -1,0 +1,29 @@
+/* filepath: /f:/Maithil-Pariwar/maithil-pariwar-chennai/src/app/pages/about-us/about-us.component.scss */
+.about-us-box {
+    color: #ff6900; /* Set the font color */
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    border: 2px solid #ff6900;
+    border-radius: 8px;
+    background-color: #fff5e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  
+    .about-us-content {
+      display: flex;
+      align-items: center; /* Align logo and text vertically */
+      gap: 20px; /* Add spacing between logo and text */
+    }
+  
+    .about-us-logo {
+      width: 100px; /* Adjust the logo size */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 8px; /* Optional: Add rounded corners to the logo */
+    }
+  
+    .about-us-text {
+      flex: 1; /* Allow the text to take up remaining space */
+    }
+  }

@@ -2,14 +2,8 @@
 <div class="container mt-5">
   <div class="card shadow">
     <div class="card-body">
+      <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
 
-      <form 
-        name="contact" 
-        method="POST" 
-        netlify 
-        netlify-honeypot="bot-field" 
-        (ngSubmit)="onSubmit()"
-      >
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
 

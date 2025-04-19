@@ -1,61 +1,7 @@
-section {
-    background-color: #fff5e6; /* Light background color for the box */
-    border: 2px solid #ff6900; /* Add a border with the theme color */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    padding: 20px; /* Add padding inside the box */
-    max-width: 600px; /* Limit the width of the box */
-    margin: 20px auto; /* Center the box horizontally and add vertical spacing */
-  
-    h2 {
-      color: #ff6900; /* Set the font color */
-      font-size: 24px; /* Adjust the font size */
-      margin-bottom: 20px; /* Add spacing below the heading */
-      text-align: center; /* Center the heading */
-      transition: transform 0.3s ease, color 0.3s ease; /* Add smooth animation for hover */
-  
-      &:hover {
-        transform: scale(1.1); /* Slightly enlarge the heading on hover */
-        color: #ff4500; /* Change the color on hover */
-      }
-    }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px; /* Add spacing between form elements */
-  
-      label {
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-  
-      input, textarea {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 14px;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effects */
-  
-        &:focus {
-          border-color: #ff6900; /* Change border color on focus */
-          box-shadow: 0 0 5px rgba(255, 105, 0, 0.5); /* Add a glowing effect */
-          outline: none; /* Remove default outline */
-        }
-      }
-  
-      button {
-        background-color: #ff6900;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: #ff4500; /* Darker shade on hover */
-        }
-      }
-    }
-  }
+/* filepath: f:\Maithil-Pariwar\maithil-pariwar-chennai\src\app\pages\contact-us\contact-us.component.scss */
+.iframe-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the iframe */
+  align-items: center; /* Vertically center the iframe (if needed) */
+}
+

@@ -39,6 +39,9 @@
 .navbar {
   background-color: #d24805;
   padding: 0.5rem 1rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .navbar-links {

@@ -12,6 +12,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PhotoGalleryComponent } from './pages/photo-gallery/photo-gallery.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutMithilaComponent } from './about-mithila/about-mithila.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactUsComponent,
     NavbarComponent,
     FooterComponent,
-    PhotoGalleryComponent
+    PhotoGalleryComponent,
+    AboutMithilaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

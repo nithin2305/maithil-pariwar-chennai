@@ -5,6 +5,7 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { UpcomingProgramsComponent } from './pages/upcoming-programs/upcoming-programs.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { PhotoGalleryComponent } from './pages/photo-gallery/photo-gallery.component';
+import { AboutMithilaComponent } from './about-mithila/about-mithila.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'upcoming-programs', component: UpcomingProgramsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'photo-gallery', component: PhotoGalleryComponent },
+  { path: 'about-mithila', component: AboutMithilaComponent }
 
 ];
 

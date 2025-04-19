@@ -1,11 +1,55 @@
-/* filepath: f:\Maithil-Pariwar\maithil-pariwar-chennai\src\app\pages\contact-us\contact-us.component.scss */
-.iframe-container {
-  display: flex;
-  justify-content: center; /* Horizontally center the iframe */
-  align-items: center; /* Vertically center the iframe (if needed) */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
 }
-.gallery-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color:  #bf360c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: black;
 }

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -59,7 +58,7 @@ export class HomeComponent {
     // Automatically move to the next image every 5 seconds
     this.intervalId = setInterval(() => {
       this.nextImage();
-    }, 6000);
+    }, 5000);
   }
 
   ngOnDestroy() {
@@ -69,36 +68,15 @@ export class HomeComponent {
     }
   }
 
- nextImage() {
-  const carouselImage = document.querySelector('.carousel-image') as HTMLElement;
-  if (!carouselImage) {
-    console.error('Carousel image element not found');
-    return;
-  }
-  carouselImage.style.transform = 'translateX(-100%)'; // Slide left
-  setTimeout(() => {
+
+  nextImage() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    carouselImage.style.transition = 'none';
-    carouselImage.style.transform = 'translateX(100%)'; // Reset position
-    setTimeout(() => {
-      carouselImage.style.transition = 'transform 0.5s ease-in-out';
-      carouselImage.style.transform = 'translateX(0)'; // Slide back to center
-    });
-  }, 6000);
-}
-  prevImage() {
-    const carouselImage = document.querySelector('.carousel-image') as HTMLElement;
-    carouselImage.style.transform = 'translateX(100%)'; // Slide right
-    setTimeout(() => {
-      this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
-      carouselImage.style.transition = 'none';
-      carouselImage.style.transform = 'translateX(-100%)'; // Reset position
-      setTimeout(() => {
-        carouselImage.style.transition = 'transform 0.5s ease-in-out';
-        carouselImage.style.transform = 'translateX(0)'; // Slide back to center
-      });
-    }, 500);
   }
+
+  prevImage() {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
+  }
+
   goToImage(index: number) {
     this.currentIndex = index;
   }

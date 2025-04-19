@@ -79,12 +79,17 @@
 /* Responsive for screens below 768px */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block; /* Ensure the menu toggle is visible */
+    font-size: 24px; /* Adjust the size of the toggle icon */
+    cursor: pointer; /* Add a pointer cursor for better UX */
+    margin-left: center; /* Align it to the right */
+    padding: 10px;
+    color: #d24805; /* Match the color with the navbar links */
   }
 
   .navbar {
     flex-direction: column;
-    align-items: center; /* Back to center alignment for mobile */
+    align-items: center; /* Center alignment for mobile */
     padding: 10px 0;
   }
 
@@ -93,7 +98,7 @@
   }
 
   .navbar-links {
-    display: none;
+    display: none; /* Hide links by default */
     flex-direction: column;
     width: 100%;
     background-color: #fff;
@@ -107,7 +112,7 @@
     }
 
     &.active {
-      display: flex;
+      display: flex; /* Show links when menu is toggled */
     }
   }
 }

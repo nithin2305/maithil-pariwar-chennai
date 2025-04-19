@@ -74,45 +74,39 @@
       }
     }
   }
-}
-
-/* Responsive for screens below 768px */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block; /* Ensure the menu toggle is visible */
-    font-size: 24px; /* Adjust the size of the toggle icon */
-    cursor: pointer; /* Add a pointer cursor for better UX */
-    margin-left: center; /* Align it to the right */
-    padding: 10px;
-    color: #d24805; /* Match the color with the navbar links */
-  }
-
+}/* Hide menu toggle by default */
+@media screen and (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: center; /* Center alignment for mobile */
-    padding: 10px 0;
+    flex-wrap: wrap;
   }
 
-  .navbar-logo-container {
-    margin-bottom: 10px;
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #d24805;
   }
 
   .navbar-links {
-    display: none; /* Hide links by default */
-    flex-direction: column;
+    display: none; /* Hidden by default on mobile */
     width: 100%;
+    flex-direction: column;
     background-color: #fff;
-    margin-top: 10px;
-    margin-left: 0; /* Reset margin-left for mobile */
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    z-index: 1000;
+  }
 
-    a {
-      padding: 12px;
-      border-bottom: 1px solid #eee;
-      text-align: center; /* Center text on mobile */
-    }
+  .navbar-links.show-mobile {
+    display: flex; /* Show when class is added */
+  }
 
-    &.active {
-      display: flex; /* Show links when menu is toggled */
-    }
+  .navbar-links a {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    display: block;
   }
 }

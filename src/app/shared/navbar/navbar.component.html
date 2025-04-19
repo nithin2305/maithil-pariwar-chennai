@@ -18,12 +18,12 @@
       <span class="navbar-title">Maithil Pariwar Chennai (Regd.)</span>
     </div>
     <div class="menu-toggle" (click)="toggleMenu()">☰</div>
-    <div class="navbar-links" [class.active]="isMenuOpen">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/about-us">About Us</a>
-      <a routerLink="/photo-gallery">Photo Gallery</a>
-      <a routerLink="/upcoming-programs">Events</a>
-      <a routerLink="/contact-us">Contact Us</a>
+    <div class="navbar-links" *ngIf="isMenuOpen || screenWidth > 768">
+      <a routerLink="/home" (click)="closeMenu()">Home</a>
+      <a routerLink="/about-us" (click)="closeMenu()">About Us</a>
+      <a routerLink="/photo-gallery" (click)="closeMenu()">Photo Gallery</a>
+      <a routerLink="/upcoming-programs" (click)="closeMenu()">Events</a>
+      <a routerLink="/contact-us" (click)="closeMenu()">Contact Us</a>
     </div>
   </div>
 </div>

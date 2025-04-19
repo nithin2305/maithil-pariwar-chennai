@@ -1,12 +1,15 @@
 <section>
     <h2>Contact Us</h2>
-    <form>
-      <label>Name</label>
-      <input type="text" name="name" />
-      <label>Email</label>
-      <input type="email" name="email" />
-      <label>Message</label>
-      <textarea name="message"></textarea>
+    <form name="contact" method="POST" netlify>      <label>Name</label>
+      <label>Your Name: <input type="text" name="name" /></label>
+      <p>
+        <label>Your Email: <input type="email" name="email" /></label>
+      </p>
+    
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
       <button type="submit">Send</button>
     </form>
   </section>

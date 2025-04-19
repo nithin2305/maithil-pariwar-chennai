@@ -1,16 +1,17 @@
-<section class="upcoming-programs-box">
-    <h2>Photo Gallery</h2>
-    <h3>Glimpse from Holi Milan 2025</h3> <!-- Added heading -->
+<section class="photo-gallery">
+  <h2>Photo Gallery</h2>
+  <!-- <h3>Glimpse from Holi Milan 2025</h3> -->
 
-    <div class="gallery">
-      <img src="assets/image_10.jpg" alt="Event 1">
-      <img src="assets/image_6.jpg" alt="Event 2">
-      <img src="assets/image_9.jpg" alt="Event 3">
-      <img src="assets/image_7.jpg" alt="Event 3">
-      <img src="assets/image_8.jpg" alt="Event 3">
-      <img src="assets/image_5.jpg" alt="Event 3">
-      <img src="assets/image_11.jpg" alt="Event 3">
-      <!-- Add more as needed -->
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let image of images; let i = index">
+      <img [src]="image.src" [alt]="image.alt" (click)="openModal(i)">
     </div>
-  </section>
-  
+  </div>
+
+  <!-- Fullscreen Image Modal -->
+  <div class="image-modal" (click)="closeModal()">
+    <button class="prev" (click)="prevImage($event)">❮</button>
+    <img id="modal-image" src="" alt="Fullscreen Image">
+    <button class="next" (click)="nextImage($event)">❯</button>
+  </div>
+</section>

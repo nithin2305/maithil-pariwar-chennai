@@ -1,25 +1,87 @@
-section{
-  color: #ff6900; /* Set the font color for the entire section */
+.photo-gallery {
+  text-align: center;
+  padding: 20px;
 
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px; /* Add spacing between images */
-  justify-content: center;
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
 
-  img {
-    width: 200px; /* Set a fixed width for the images */
-    height: 150px; /* Set a fixed height for the images */
-    object-fit: cover; /* Ensure the images maintain their aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
-    transform-origin: center; /* Ensure the enlargement happens from the center */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
 
-    &:hover {
-      transform: scale(5.2); /* Enlarge the image on hover */
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-      z-index: 1; /* Ensure the hovered image appears on top */
+    .gallery-item {
+      cursor: pointer;
+
+      img {
+        width: 100%; /* Ensure the image takes up the full width of the container */
+        height: 150px; /* Set a fixed height for consistency */
+        object-fit: cover; /* Ensure the image maintains its aspect ratio */
+        border: 5px solid #ddd; /* Add a consistent border */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        padding: 0; /* Remove padding to ensure the border is flush with the image */
+        background-color: transparent; /* No background color for a clean look */
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05); /* Slightly enlarge the image on hover */
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+          border-color: #ff6900; /* Change border color on hover */
+        }
+      }
     }
+  }
+
+  .image-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 50%;
+      z-index: 1001;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+  }
+
+  .image-modal.active {
+    display: flex; /* Show the modal when active */
   }
 }

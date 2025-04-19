@@ -74,17 +74,3 @@
     }
   }
 
-  @media (max-width: 480px) {
-    .carousel-wrapper {
-      height: 200px; /* Further reduce height for very small screens */
-    }
-
-    .nav {
-      padding: 6px; /* Smaller navigation buttons */
-    }
-
-    .dots span {
-      width: 6px; /* Even smaller dots */
-      height: 6px;
-    }
-  }

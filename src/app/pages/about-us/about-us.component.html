@@ -1,8 +1,17 @@
 <section class="about-us-box">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+      <label class="switch">
+        <input type="checkbox" [(ngModel)]="isEnglish" />
+        <span class="slider"></span>
+      </label>
+      <span class="lang-label">{{ isEnglish ? 'English' : 'मैथिली' }}</span>
+    </div>
   <div class="about-us-content">
     <img src="assets/logo/logo.jpg" alt="Logo" class="about-us-logo" />
     <div class="about-us-text">
       <h2>About Us</h2>
+      <div *ngIf="!isEnglish">
       <p>
         मैथिल परिवार, चेन्नई एक सक्रिय आ समर्पित समूह छी, जे चेन्नई में रहै वाला मैथिल समाज के एक मंच पर अनैत अछि।
         हम सब अपन भाषा, संस्कृति आ परंपरा के संजोग क’ राखे लेल लगातार प्रयासरत छी।
@@ -14,6 +23,22 @@
         
         “संस्कृति स पहिचान, एकता स सम्मान” — मैथिल परिवार, चेन्नई स अहाँ के हार्दिक स्वागत।  
       </p>
+    </div>
+
+    <div *ngIf="isEnglish">
+      <p> 
+        Maithil Parivar, Chennai is an active and dedicated group that serves as a platform for the Maithil community residing 
+        in Chennai. We are constantly striving to preserve and promote our language, culture, and traditions.
+        Various cultural events, festivals, and community gatherings are organized throughout the year by this group. Whether it’s 
+        Holi Milan, Diwali Milan, traditional plays and songs, or special events for children — we come together to make every occasion a 
+        celebration.
+        
+        Maithil Parivar is not just an organization, but a family that provides a sense of belonging, like a second home away from home, 
+        where every member considers each other as companions and collaborators.
+        
+        “Identity through culture, respect through unity” — A warm welcome from Maithil Parivar, Chennai.
+        </p>
+    </div>
     </div>
   </div>
 </section>

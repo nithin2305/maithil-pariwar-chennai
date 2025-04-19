@@ -1,7 +1,8 @@
 <section class="photo-gallery">
-  <h2>Photo Gallery</h2>
+  <!-- <h2>Photo Gallery</h2> -->
   <!-- <h3>Glimpse from Holi Milan 2025</h3> -->
-
+  <img src="assets/logo/GL.png" alt="Event 1" class="gallery-image">
+  <hr>
   <div class="gallery">
     <div class="gallery-item" *ngFor="let image of images; let i = index">
       <img [src]="image.src" [alt]="image.alt" (click)="openModal(i)">

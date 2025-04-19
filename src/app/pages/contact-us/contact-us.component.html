@@ -1,10 +1,35 @@
-<div class="iframe-container">
-  <iframe
-    src="https://docs.google.com/forms/d/e/1FAIpQLSfFnvhBN12gxUN5EN04g8M_OzweYicFOk1Z8cDQoduXWGLrnA/viewform?embedded=true"
-    width="640"
-    height="929"
-    
-  >
-    Loading…
-  </iframe>
+<img src="assets/logo/CUS.png" alt="Event 1" class="gallery-image">
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-body">
+
+      <form 
+        name="contact" 
+        method="POST" 
+        netlify 
+        netlify-honeypot="bot-field" 
+        (ngSubmit)="onSubmit()"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control"  [(ngModel)]="name" name="name" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control"  [(ngModel)]="email" name="email" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" name="message" [(ngModel)]="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
 </div>

@@ -14,7 +14,7 @@
 /* Bearers grid */
 .office-bearers-container .bearers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
   gap: 20px; /* Space between cards */
   justify-items: center; /* Center align items horizontally */
 }
@@ -62,33 +62,21 @@
   font-size: 14px;
 }
 
-/* Make the Office Bearers image work as a cover image */
-.gallery-container img[src*="Ob.png"],
-img[alt="Event 1"] {
-  width: 100% !important; /* Take full width of container */
-  max-width: 800px !important; /* Cap at a reasonable maximum width */
-  height: auto !important; /* Maintain aspect ratio */
-  margin: 0 auto !important;
-  display: block !important;
-  object-fit: contain !important; /* Ensure the whole image is visible */
+/* Responsive design */
+@media (max-width: 1024px) {
+  .office-bearers-container .bearers-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
 }
 
-/* Ensure the container allows for full width */
-.gallery-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-/* Responsive design */
 @media (max-width: 768px) {
-  .bearers-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  .office-bearers-container .bearers-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
   }
 }
 
 @media (max-width: 480px) {
-  .bearers-grid {
+  .office-bearers-container .bearers-grid {
     grid-template-columns: 1fr; /* 1 column for very small screens */
   }
 }

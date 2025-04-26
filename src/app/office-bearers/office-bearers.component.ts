@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { NavbarComponent } from '../shared/navbar/navbar.component';
 @Component({
   selector: 'app-office-bearers',
   templateUrl: './office-bearers.component.html',
   styleUrls: ['./office-bearers.component.scss']
 })
-export class OfficeBearersComponent {
+export class OfficeBearersComponent implements OnInit {
+  @ViewChild(NavbarComponent) navbarComponent!: NavbarComponent;
+  
+  ngOnInit(): void {
+    this.navbarComponent.isDropdownOpen = false;
+  }
 
   executiveMembers = [
     { name: 'Amarnath Mishra', designation: 'President' },

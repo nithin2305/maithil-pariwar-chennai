@@ -4,6 +4,7 @@
   position: relative;
   margin-top: 0.5rem;
   padding-top: 0;
+  background-color: white;
 
   .carousel-wrapper {
     position: relative;
@@ -14,10 +15,69 @@
     .carousel-image {
       width: 100%;
       height: 100%;
-      object-fit: contain; /* Ensures the entire image is visible without cropping */
-      object-position: center; /* Centers the image within the container */
-      background-color: #f0f0f0; /* Optional: Add a background color for empty spaces */
-      transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      object-fit: contain; /* Ensures the entire image is visible */
+      object-position: center;
+      display: block;
+      background-color: white;
+      
+      /* Add animation for image transitions */
+      animation: imageTransition 0.8s ease;
+    }
+
+    /* Define the animation keyframes */
+    @keyframes imageTransition {
+      0% {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Alternative transition animations - you can replace the animation above with any of these */
+    
+    /* Fade animation */
+    @keyframes fadeTransition {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    /* Slide from right animation */
+    @keyframes slideFromRightTransition {
+      0% { 
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      100% { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    /* Slide from left animation */
+    @keyframes slideFromLeftTransition {
+      0% { 
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% { 
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    /* Subtle zoom animation */
+    @keyframes zoomTransition {
+      0% { 
+        opacity: 0;
+        transform: scale(1.15);
+      }
+      100% { 
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 
@@ -25,50 +85,35 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(100, 100, 100, 0.7); /* Darker for better visibility */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px 15px;
     cursor: pointer;
     z-index: 2;
     border-radius: 50%;
     font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(70, 70, 70, 0.9);
+      transform: translateY(-50%) scale(1.1);
     }
   }
 
   .prev {
-    left: 10px;
+    left: 15px;
   }
 
   .next {
-    right: 10px;
-  }
-
-  .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-    span {
-      width: 12px;
-      height: 12px;
-      margin: 0 5px;
-      background-color: gray;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-
-      &.active {
-        background-color: black;
-      }
-
-      &:hover {
-        background-color: #555;
-      }
-    }
+    right: 15px;
   }
 
   @media (max-width: 768px) {
@@ -77,13 +122,10 @@
     }
 
     .nav {
-      padding: 8px; /* Adjust button size */
+      padding: 10px;
       font-size: 16px;
-    }
-
-    .dots span {
-      width: 10px; /* Smaller dots */
-      height: 10px;
+      width: 35px;
+      height: 35px;
     }
   }
 
@@ -93,13 +135,10 @@
     }
 
     .nav {
-      padding: 6px; /* Smaller navigation buttons */
+      padding: 8px;
       font-size: 14px;
-    }
-
-    .dots span {
-      width: 8px; /* Even smaller dots */
-      height: 8px;
+      width: 30px;
+      height: 30px;
     }
   }
-} 
+}

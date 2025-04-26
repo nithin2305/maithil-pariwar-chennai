@@ -8,6 +8,7 @@ import { Component,HostListener } from '@angular/core';
 export class NavbarComponent {
   isMenuOpen: boolean = false;
   screenWidth: number = 0;
+  isDropdownOpen = false;
 
   constructor() {
     this.screenWidth = window.innerWidth;
@@ -25,8 +26,13 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
   closeMenu(): void {
     this.isMenuOpen = false;
+    this.isDropdownOpen = false; // Close dropdown when menu is closed
+
   }
 
 }

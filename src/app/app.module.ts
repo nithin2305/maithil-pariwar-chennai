@@ -14,6 +14,12 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutMithilaComponent } from './about-mithila/about-mithila.component';
 import { FormsModule } from '@angular/forms';
+import { OfficeBearersComponent } from './office-bearers/office-bearers.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -25,14 +31,19 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     PhotoGalleryComponent,
-    AboutMithilaComponent
+    AboutMithilaComponent,
+    OfficeBearersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatMenuModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

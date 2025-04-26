@@ -1,0 +1,18 @@
+<!-- <div class ="gallery-container">
+<img src="assets/logo/Ob.png" alt="Event 1" class="gallery-image">
+</div> -->
+<div class="office-bearers-container">
+  <h2 class="section-title">Office Bearers</h2>
+
+  <div class="bearers-grid">
+    <div class="bearer-card" *ngFor="let member of executiveMembers">
+      <div class="bearer-image">
+        <img src="assets/Members/43.jpg" [alt]="member.name" />
+      </div>
+      <div class="bearer-details">
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.designation }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -24,7 +24,7 @@ export class OfficeBearersComponent implements OnInit {
     // { name: 'Manoj Kumar Jha', designation: 'Joint Secretary', photo: 'assets/Members/manoj-kumar-jha.jpg' },
     { name: 'Manoj Kumar Jha', designation: 'Joint Secretary', photo:'assets/Members/43.jpg' },
     { name: 'Ajay Shankar Jha', designation: 'Treasurer', photo: 'assets/Members/ajay-shankar-jha.jpg' },
-    { name: 'CA Bimlendra Mishra', designation: 'Executive Member', photo: 'assets/Members/ca-bimlendra-mishra.jpg' },
+    { name: 'CA Bimlendar Mishra', designation: 'Executive Member', photo: 'assets/Members/ca-bimlendra-mishra.jpg' },
     { name: 'Pankaj Kumar Jha', designation: 'Executive Member', photo: 'assets/Members/43.jpg' },
     // { name: 'CA Bimlendra Mishra', designation: 'Executive Member', photo: 'assets/Members/43.jpg' },
     { name: 'Sunil Kumar Jha', designation: 'Executive Member', photo: 'assets/Members/sunil-kumar-jha.jpg' },

@@ -7,7 +7,7 @@
   <div class="bearers-grid">
     <div class="bearer-card" *ngFor="let member of executiveMembers">
       <div class="bearer-image">
-        <img src="assets/Members/43.jpg" [alt]="member.name" />
+        <img [src]="member.photo" [alt]="member.name" />
       </div>
       <div class="bearer-details">
         <h3>{{ member.name }}</h3>

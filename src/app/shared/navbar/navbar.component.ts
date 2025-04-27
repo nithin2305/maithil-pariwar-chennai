@@ -1,4 +1,4 @@
-import { Component,HostListener } from '@angular/core';
+import { Component,HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +6,9 @@ import { Component,HostListener } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  isMenuOpen: boolean = false;
+  @Input() isDropdownOpen: boolean = false;
+  @Input() isMenuOpen: boolean = false;
   screenWidth: number = 0;
-  isDropdownOpen = false;
 
   constructor() {
     this.screenWidth = window.innerWidth;

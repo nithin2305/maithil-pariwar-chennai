@@ -30,6 +30,8 @@
       </div>      <a routerLink="/photo-gallery" (click)="closeMenu()">Photo Gallery</a>
       <a routerLink="/upcoming-programs" (click)="closeMenu()">Events</a>
       <a routerLink="/contact-us" (click)="closeMenu()">Contact Us</a>
+      <a *ngIf="!isLoggedIn" routerLink="/login" class="login-btn" (click)="closeMenu()">Login</a>
+      <a *ngIf="isLoggedIn" (click)="logout()" class="login-btn logout-btn">Logout</a>
     </div>
   </div>
 </div>

@@ -72,6 +72,19 @@
         color: white;
         text-decoration: none;
       }
+      
+      &.login-btn {
+        background-color: #d24805;
+        color: white;
+        
+        &:hover {
+          background-color: #f76c1d;
+        }
+      }
+      
+      &.logout-btn {
+        cursor: pointer;
+      }
     }
   }
   .dropdown {

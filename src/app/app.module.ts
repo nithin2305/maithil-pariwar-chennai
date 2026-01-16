@@ -21,6 +21,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AdminContactMessagesComponent } from './pages/admin-contact-messages/admin-contact-messages.component';
+import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FooterComponent,
     PhotoGalleryComponent,
     AboutMithilaComponent,
-    OfficeBearersComponent
+    OfficeBearersComponent,
+    AdminContactMessagesComponent,
+    AdminUsersComponent
   ],
   imports: [
     BrowserModule,

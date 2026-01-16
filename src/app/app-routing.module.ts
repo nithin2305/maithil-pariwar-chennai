@@ -8,6 +8,8 @@ import { PhotoGalleryComponent } from './pages/photo-gallery/photo-gallery.compo
 import { AboutMithilaComponent } from './about-mithila/about-mithila.component';
 import { OfficeBearersComponent } from './office-bearers/office-bearers.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AdminContactMessagesComponent } from './pages/admin-contact-messages/admin-contact-messages.component';
+import { AdminUsersComponent } from './pages/admin-users/admin-users.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'photo-gallery', component: PhotoGalleryComponent },
   { path: 'about-mithila', component: AboutMithilaComponent },
   { path: 'office-bearers', component: OfficeBearersComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'admin/contact-messages', component: AdminContactMessagesComponent },
+  { path: 'admin/users', component: AdminUsersComponent }
 ];
 
 

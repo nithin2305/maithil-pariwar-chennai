@@ -60,4 +60,8 @@ export class AuthService {
   getToken(): string | null {
     return localStorage.getItem('token');
   }
+
+  isAdmin(): boolean {
+    return this.currentUserValue?.role === 'ADMIN';
+  }
 }

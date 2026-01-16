@@ -1,4 +1,4 @@
-import { Component,HostListener, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
@@ -12,6 +12,7 @@ export class NavbarComponent {
   @Input() isMenuOpen: boolean = false;
   screenWidth: number = 0;
   isLoggedIn: boolean = false;
+  isAdmin: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -20,6 +21,7 @@ export class NavbarComponent {
     this.screenWidth = window.innerWidth;
     this.authService.currentUser.subscribe(user => {
       this.isLoggedIn = !!user;
+      this.isAdmin = this.authService.isAdmin();
     });
   }
 

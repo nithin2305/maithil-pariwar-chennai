@@ -1,4 +1,6 @@
 import { Component,HostListener, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +11,16 @@ export class NavbarComponent {
   @Input() isDropdownOpen: boolean = false;
   @Input() isMenuOpen: boolean = false;
   screenWidth: number = 0;
+  isLoggedIn: boolean = false;
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.screenWidth = window.innerWidth;
+    this.authService.currentUser.subscribe(user => {
+      this.isLoggedIn = !!user;
+    });
   }
 
   @HostListener('window:resize', ['$event'])
@@ -33,6 +42,12 @@ export class NavbarComponent {
     this.isMenuOpen = false;
     this.isDropdownOpen = false; // Close dropdown when menu is closed
 
+  }
+
+  logout(): void {
+    this.authService.logout();
+    this.closeMenu();
+    this.router.navigate(['/home']);
   }
 
 }

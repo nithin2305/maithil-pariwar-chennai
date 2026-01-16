@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { UpcomingProgramsComponent } from './pages/upcoming-programs/upcoming-programs.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { LoginComponent } from './pages/login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PhotoGalleryComponent } from './pages/photo-gallery/photo-gallery.component';
@@ -28,6 +30,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AboutUsComponent,
     UpcomingProgramsComponent,
     ContactUsComponent,
+    LoginComponent,
     NavbarComponent,
     FooterComponent,
     PhotoGalleryComponent,
@@ -40,6 +43,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserAnimationsModule,
     CarouselModule,
     FormsModule,
+    HttpClientModule,
     MatTableModule,
     MatMenuModule,
     MatIconModule,

@@ -7,6 +7,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { PhotoGalleryComponent } from './pages/photo-gallery/photo-gallery.component';
 import { AboutMithilaComponent } from './about-mithila/about-mithila.component';
 import { OfficeBearersComponent } from './office-bearers/office-bearers.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'photo-gallery', component: PhotoGalleryComponent },
   { path: 'about-mithila', component: AboutMithilaComponent },
-  { path: 'office-bearers', component: OfficeBearersComponent }
+  { path: 'office-bearers', component: OfficeBearersComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 

@@ -55,7 +55,5 @@ export class ContactUsComponent {
     return re.test(String(email).toLowerCase());
   }
 }
-
-
   
 
